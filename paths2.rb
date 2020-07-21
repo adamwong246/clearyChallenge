@@ -1,16 +1,14 @@
-require 'set'
-
 def findSubPath (path, subpath)
-  puts "findSubPath: (#{path}, #{subpath})"
+  # puts "findSubPath: (#{path}, #{subpath})"
 
   p = path.join('')
   sp = subpath.join('')
 
   if p.include? sp
-    puts "TRUE"
+    # puts "TRUE"
     return true
   else
-    puts "FALSE"
+    # puts "FALSE"
     return false
   end
 
@@ -27,14 +25,14 @@ def mostCommon4PagePath (paths)
   occurences = 0
 
   paths.each { |path|
-    puts ""
-    puts path.inspect
-    puts occurences
+    # puts ""
+    # puts path.inspect
+    # puts occurences
 
     for ndx in (0...path.length-3)
       # puts ndx
       subpath = path.slice(ndx, 4)
-      puts "subpath: #{subpath.inspect}"
+      # puts "subpath: #{subpath.inspect}"
 
 
       occurences2 = 0
